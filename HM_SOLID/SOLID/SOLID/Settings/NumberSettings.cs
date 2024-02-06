@@ -21,5 +21,10 @@
             MaxNumber = maxNumber;
             AttemptsCount = attemptsCount;
         }
+
+        public override string GetSettings()
+        {
+            return $"Максимальное число: {MaxNumber}, Минимальное число: {MinNumber}, Количество попыток: {AttemptsCount}";
+        }
     }
 }

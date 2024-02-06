@@ -8,18 +8,23 @@
         /// <summary>
         /// Минимальная буква
         /// </summary>
-        public int Minletter { get; set; }
+        public char Minletter { get; set; }
 
         /// <summary>
         /// Максимальная буква
         /// </summary>
-        public int Maxletter { get; set; }
+        public char Maxletter { get; set; }
 
-        public LetterSettings(char minLetter, int maxLetter, int attemptsCount)
+        public LetterSettings(char minLetter, char maxLetter, int attemptsCount)
         {
             Minletter = minLetter;
             Maxletter = maxLetter;
             AttemptsCount = attemptsCount;
+        }
+
+        public override string GetSettings()
+        {
+            return $"Максимальная буква: {Maxletter}, Минимальная буква: {Minletter}, Количество попыток: {AttemptsCount}";
         }
     }
 }

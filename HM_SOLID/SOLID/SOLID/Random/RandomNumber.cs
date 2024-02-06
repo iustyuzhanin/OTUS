@@ -1,6 +1,6 @@
 ﻿namespace SOLID
 {
-    public class RandomNumber : IRandomNumber<int>
+    public class RandomNumber : IRandom<int>
     {
         public int GenerateValue(int minNumber, int maxNumber)
         {
